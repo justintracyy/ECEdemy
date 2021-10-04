@@ -4533,92 +4533,18 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.subjects-section {
-  background: var(--bs-dark);
-  margin-top: -0.485em;
-}
-
-.subjects-section img.decor1 {
-  display: none;
-}
-
-.subjects-section img.decor2 {
-  display: none;
-}
-
-.subjects-section li {
-  background: var(--bs-light);
-  text-align: center;
-  padding: 0.1em;
-  width: 75%;
-  margin: 1.5em auto 1.5em auto;
-  border-radius: 1em;
-}
-
-.subjects-section li img {
-  margin-top: 0.5em;
-  margin-bottom: -0.3em;
-  width: 55%;
-}
-
-@media (min-width: 48rem) {
-  .subjects-section li img {
-    width: 65%;
-  }
-}
-
-.subjects-section li h2 {
-  font-size: 1.8em;
-  line-height: 1.2em;
-  margin: 0;
-  color: var(--bs-dark);
-}
-
-.subjects-section li p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-top: 0.15em;
-  margin-bottom: 1em;
-  color: #404040;
-}
-
-.subjects-section {
-  padding: 5.5em 5.5em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.subjects-section ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.decor1 {
+  display: block;
   position: relative;
+  float: left !important;
+  bottom: 24rem;
 }
-.subjects-section ul li {
-  margin: 0 1em;
-}
-.subjects-section ul img.decor1 {
+
+.decor2 {
   display: block;
-  position: absolute;
-  left: -6em;
-  bottom: 9em;
-}
-.subjects-section ul img.decor2 {
-  display: block;
-  position: absolute;
-  right: -6em;
-  bottom: -9em;
-}
-.subjects-section ul h2 {
-  font-size: 2em;
-  line-height: 1em;
-  margin: 0;
-}
-.subjects-section ul p {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-top: 0.4em;
-  margin-bottom: 1em;
+  position: relative;
+  float: right !important;
+  bottom: 5rem;
 }
 
 .card {
@@ -4627,7 +4553,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #f8f9fa;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -7406,6 +7332,11 @@ textarea.form-control-lg {
   margin-bottom: 2rem !important;
 }
 
+.my-7 {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -7496,6 +7427,10 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem !important;
 }
 
+.mb-7 {
+  margin-bottom: 2rem !important;
+}
+
 .mb-auto {
   margin-bottom: auto !important;
 }
@@ -7582,6 +7517,11 @@ textarea.form-control-lg {
   padding-left: 3rem !important;
 }
 
+.px-6 {
+  padding-right: 2rem !important;
+  padding-left: 2rem !important;
+}
+
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -7614,19 +7554,18 @@ textarea.form-control-lg {
 
 .py-6 {
   padding-top: 0.5rem !important;
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .py-7 {
   padding-top: 2rem !important;
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 0rem !important;
 }
 
 .py-8 {
   padding-top: 0rem !important;
   padding-bottom: 3rem !important;
 }
-
 
 .pt-0 {
   padding-top: 0 !important;
@@ -7784,12 +7723,13 @@ textarea.form-control-lg {
 }
 
 .fw-bold {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 .fw-bolder {
   font-weight: bolder !important;
 }
+
 
 .lh-1 {
   line-height: 1 !important;
@@ -8088,6 +8028,10 @@ textarea.form-control-lg {
 
 .rounded-3 {
   border-radius: 0.3rem !important;
+}
+
+.rounded-4 {
+  border-radius: 25px !important;
 }
 
 .rounded-circle {
@@ -11476,7 +11420,5 @@ html {
 
 .logo-img-footer {
   position: relative;
-  width: 7%;
-  margin-top: -20px;
-  margin-bottom: -20px;
+  width: 5rem;
 }
