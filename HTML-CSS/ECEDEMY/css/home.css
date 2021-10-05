@@ -685,6 +685,12 @@ progress {
   margin-top: var(--bs-gutter-y);
 }
 
+.overview {
+color: #fff;
+font-size: 12pt;
+font-weight: 700;
+}
+
 .col {
   flex: 1 0 0%;
 }
@@ -7314,7 +7320,7 @@ textarea.form-control-lg {
 
 .my-3 {
   margin-top: 1rem !important;
-  margin-bottom: 3rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .my-4 {
@@ -7328,8 +7334,8 @@ textarea.form-control-lg {
 }
 
 .my-6 {
-  margin-top: 0.5rem !important;
-  margin-bottom: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .my-7 {
@@ -7424,7 +7430,7 @@ textarea.form-control-lg {
 
 .mb-6 {
   margin-top: -1.5rem;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
 }
 
 .mb-7 {
@@ -7718,7 +7724,7 @@ textarea.form-control-lg {
 .fw-normal-2 {
   font-weight: 500 !important;
   font-size: 1.2rem;
-  text-align: right;
+  float: right;
 }
 
 .fw-bold {
@@ -7728,7 +7734,6 @@ textarea.form-control-lg {
 .fw-bolder {
   font-weight: bolder !important;
 }
-
 
 .lh-1 {
   line-height: 1 !important;
