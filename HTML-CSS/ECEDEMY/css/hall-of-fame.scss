@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.main-content {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    flex-direction: column;
+    padding: 15px;
+
+    @media (min-width: 360px) {
+        padding: 10px;
+    }
+}
+
+.hof-header{
+    font-size: 1.2rem;
+
+    text-align: center;
+    font-weight: bold;
+    color: var(--bs-body-color);
+    margin-top: 1em;
+
+    @media (min-width: 31.25rem) {
+        font-size: 1.8rem;
+    }
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    padding: 10px;
+    background: var(--bs-dark);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+} 
+
+.accordion .contentBx.active .label::before {
+    content: '-';
+}
+
+
+.accordion .contentBx .content {
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+    height: 200px;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th {
+      background: #E57022;
+      color: #fcfcfc;
+  }
+
+  tr, th, td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  td:hover {background-color: #ececec}
