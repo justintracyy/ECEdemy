@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Hall of Fame | ECEdemy</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/final_logo.ico" />
+        <!-- Bootstrap icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- font Regular Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Core theme CSS -->
+        <link href="css/hall-of-fame.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/home.css">
+    </head>
+
+    <body>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <img class="logo-img" src="assets/final-logo.svg" alt="logo">
+                    <a class="navbar logo" href="home.html">ECE<span>DEMY</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link text-decoration-underline" href="home.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="report.html">Report</a></li>
+                            <li class="nav-item"><a class="nav-link" href="hall-of-fame.html">Hall of Fame</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hello, User</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="my-subscription.html">My Subscription</a></li>
+                                    <li><a class="dropdown-item" href="account.html">Account</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- main content -->
+            
+            <div class="main-content">
+
+                <h1 class="hof-header">ECEDEMY HALL OF FAME</h1>
+
+                <div class="accordion">
+
+                    <div class="contentBx">
+                        <div class="label">Overall XP Points</div>
+                        <div class="content">
+                            <table class="tabulated-results" id="leaderboard">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Points</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1st</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2nd</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3rd</td>
+                                    </tr>
+                                </thead>
+
+                                <tbody></tbody>
+
+                            </table>
+
+                            <script>
+                                // fetch the points data and store it inside the variable called data`
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">Highest Streak Today</div>
+                        <div class="content">
+                            <table class="tabulated-results">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Points</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">Leaderboard 3</div>
+                        <div class="content">
+                            <table class="tabulated-results">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Points</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">Leaderboard 4</div>
+                        <div class="content">
+                            <table class="tabulated-results">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Points</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">Leaderboard 5</div>
+                        <div class="content">
+                            <table class="tabulated-results">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Points</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <script>
+                const accordion = document.getElementsByClassName('contentBx');
+
+                for (i=0; i<accordion.length; i++) {
+                    accordion[i].addEventListener('click', function() {
+                        this.classList.toggle('active')
+                    })
+                }
+            </script>
+        </main>
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">&copy; 2021 ECEdemy. All Rights Reserved.</div></div>
+                    <img class="logo-img-footer" src="assets/final-logo.svg" alt="">
+                    <div class="col-auto">
+                        <a class="link-light small" href="home.html">Home</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">About Us</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>   
+    </body>
+</html>
