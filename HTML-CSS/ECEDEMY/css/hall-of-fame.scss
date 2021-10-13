@@ -31,6 +31,12 @@
     margin: 10px 20px;
 }
 
+// opens one contentBx by default
+.accordion .content:nth-child(1) .content{
+    display: block;
+}
+
+
 .accordion .contentBx .label {
     position: relative;
     padding: 10px;
@@ -53,7 +59,6 @@
     content: '-';
 }
 
-
 .accordion .contentBx .content {
     position: relative;
     background: white;
@@ -64,27 +69,27 @@
 }
 
 .accordion .contentBx.active .content {
-    height: 200px;
+    height: auto;
     padding: 10px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+// table {
+//     border-collapse: collapse;
+//     width: 100%;
+//   }
   
-  th {
-      background: #E57022;
-      color: #fcfcfc;
-  }
+//   th {
+//       background: #E57022;
+//       color: #fcfcfc;
+//   }
 
-  tr, th, td {
+tr, th, td {
     padding: 8px;
     text-align: center;
-  }
+}
 
-  td {
-    border-bottom: 1px solid #ddd;
-  }
+//   td {
+//     border-bottom: 1px solid #ddd;
+//   }
   
-  td:hover {background-color: #ececec}
+//   td:hover {background-color: #ececec}
