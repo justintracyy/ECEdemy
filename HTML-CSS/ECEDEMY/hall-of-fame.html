@@ -11,10 +11,12 @@
         <link rel="icon" type="image/x-icon" href="assets/final_logo.ico" />
         <!-- Bootstrap icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- font Regular Poppins -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
         <!-- Core theme CSS -->
         <link href="css/hall-of-fame.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/home.css">
@@ -30,10 +32,10 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link text-decoration-underline" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
                             <li class="nav-item"><a class="nav-link" href="report.html">Report</a></li>
-                            <li class="nav-item"><a class="nav-link" href="hall-of-fame.html">Hall of Fame</a></li>
+                            <li class="nav-item"><a class="nav-link text-decoration-underline" href="hall-of-fame.html">Hall of Fame</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hello, User</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
@@ -50,7 +52,6 @@
             <!-- main content -->
             
             <div class="main-content">
-
                 <h1 class="hof-header">ECEDEMY HALL OF FAME</h1>
 
                 <div class="accordion">
@@ -58,29 +59,42 @@
                     <div class="contentBx">
                         <div class="label">Overall XP Points</div>
                         <div class="content">
-                            <table class="tabulated-results" id="leaderboard">
+                            <table class="table table-hover table-sm" style="justify-content: center;">
                                 <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>Points</th>
-                                    </tr>
-
-                                    <tr>
-                                        <td>1st</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>2nd</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>3rd</td>
-                                    </tr>
+                                  <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
                                 </thead>
-
-                                <tbody></tbody>
-
+                                
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Irish</td>
+                                    <td>2345</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Justin</td>
+                                    <td>2160</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Justin</td>
+                                    <td>1597</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>Froilan</td>
+                                    <td>1197</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td>Jamie</td>
+                                    <td>1012</td>
+                                  </tr>
+                                </tbody>
                             </table>
 
                             <script>
@@ -92,29 +106,84 @@
                     <div class="contentBx">
                         <div class="label">Highest Streak Today</div>
                         <div class="content">
-                            <table class="tabulated-results">
+                            <table class="table table-hover table-sm">
                                 <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>Points</th>
-                                    </tr>
+                                  <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
                                 </thead>
+                                
+                                <!-- <tbody id="hof-leaderboard-2">
+                                  
+                                </tbody> -->
                             </table>
+                            
+                            <!-- load the jquery script -->
+                            <!-- <script scr="" type="text/javascript"></script> -->
+                            <script>
+                                ////fetch the ranking data and store it inside the variable called data
+
+                                // var xhReq = new XMLHttpRequest();
+                                // xhReq.open('GET',"//url of api to be used//", false);
+                                // xhReq.send(null);
+                                // var data = JSON.parse.(xhReq.responseText);
+
+                                // console.log(data[0])
+
+                                // Initialization
+                                // var hof-leaderboard;
+                                // var timerId;
+                                // var updateInterval;
+
+
+                                ////Display the data on the table
+                                // function resetBoard(){
+                                //     var $list = $("#hof-leaderboard");
+                                //     $list.find(".hof-leaderboard").remove();
+                                //     hof-leaderboard = [];
+                                //     for(let i = 0; i<10; i++){
+                                //         hof-leaderboard.push(
+                                //             {
+                                //                 player:data[i].player;
+                                //                 points:data[i].points;
+                                //             }
+                                //         )
+                                //     }
+                                // }
+
+                                // for(var i=0; i<hof-leaderboard.length; i++){
+                                //     var $item = ${
+                                //         "<tr class='hof-leaderboard'>" +
+                                //             "<th class='rank'>" + [i+1] + "</th>" +
+                                //             "<td class='player'>" + hof-leaderboard[i].player + "</td>" +
+                                //             "<td class='points'>" + hof-leaderboard[i].points + "</td>" +
+                                //         "</tr>"
+                                //     }
+
+                                // }
+
+                                // resetBoard();
+                            </script>
                         </div>
                     </div>
 
                     <div class="contentBx">
                         <div class="label">Leaderboard 3</div>
                         <div class="content">
-                            <table class="tabulated-results">
+                            <table class="table table-hover table-sm">
                                 <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>Points</th>
-                                    </tr>
+                                  <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
                                 </thead>
+                                
+                                <!-- <tbody id="hof-leaderboard-3">
+                                  
+                                </tbody> -->
                             </table>
                         </div>
                     </div>
@@ -122,14 +191,18 @@
                     <div class="contentBx">
                         <div class="label">Leaderboard 4</div>
                         <div class="content">
-                            <table class="tabulated-results">
+                            <table class="table table-hover table-sm">
                                 <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>Points</th>
-                                    </tr>
+                                  <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
                                 </thead>
+                                
+                                <!-- <tbody id="hof-leaderboard-4">
+                                  
+                                </tbody> -->
                             </table>
                         </div>
                     </div>
@@ -137,19 +210,21 @@
                     <div class="contentBx">
                         <div class="label">Leaderboard 5</div>
                         <div class="content">
-                            <table class="tabulated-results">
+                            <table class="table table-hover table-sm">
                                 <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>Points</th>
-                                    </tr>
+                                  <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
                                 </thead>
+                                
+                                <!-- <tbody id="hof-leaderboar-5">
+                                  
+                                </tbody> -->
                             </table>
                         </div>
                     </div>
-
-
 
                 </div>
             </div>
@@ -162,8 +237,17 @@
                         this.classList.toggle('active')
                     })
                 }
+
+                // const accordion = document.querySelectorAll('.contentBx');
+                // accordion.forEach(acc => {
+                //     acc.addEventListener('click', function () {
+                //         this.classList.toggle('active');
+                //     })
+                // })
             </script>
+            
         </main>
+
 
         <!-- Footer-->
         <footer class="bg-dark py-2 mt-auto">
@@ -187,6 +271,11 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>  
+        <script src="js/scripts.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+           
     </body>
 </html>
