@@ -7974,6 +7974,11 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-primary-2 {
+  --bs-bg-opacity: 1;
+  background-color: #7795cb !important;
+}
+
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
@@ -8082,8 +8087,9 @@ textarea.form-control-lg {
   pointer-events: none !important;
 }
 
-.pe-auto {
-  pointer-events: auto !important;
+.pe-all {
+  pointer-events: all !important;
+  cursor: not-allowed !important;
 }
 
 .rounded {
@@ -11509,6 +11515,7 @@ html {
   padding-left: 1rem !important;
   display: flex;
   justify-content: space-between !important;
+  width: 100%;
 }
 
 .level {
@@ -11561,10 +11568,16 @@ html {
 .problem-bottom {
   width: 100%;
   margin-bottom: 2px;
-  display: block;
 }
 
-.problem-bottom-bar {
+@media (max-width: 580px) {
+.problem-input-bar {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+.problem-input-bar {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
   background-color: #eee;
@@ -11615,8 +11628,8 @@ html {
 }
 
 img.a-emblem {
-  width: 80%;
-  margin-left: 6px;
+  width: 100%;
+  margin-left: -6px;
 }
 
 .level-emblem {
@@ -11627,6 +11640,7 @@ img.a-emblem {
 
 .level-emblem span {
   position: absolute;
+  margin-left: -6px;
   top: -0.1rem;
   width: 100%;
   line-height: 50px;
@@ -11639,7 +11653,7 @@ img.a-emblem {
 
 .xp-bar {
   background-color: #eee;
-  margin-left: 30px;
+  margin-left: 21px;
   top: 0px;
 }
 
