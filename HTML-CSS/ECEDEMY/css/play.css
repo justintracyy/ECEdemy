@@ -7789,7 +7789,6 @@ textarea.form-control-lg {
 
 .fw-bold-2 {
   font-weight: bold !important;
-  font-size: 1.5rem;
 }
 
 .fw-bolder {
@@ -11536,9 +11535,7 @@ html {
 }
 
 .sub-header {
-  --bs-bg-opacity: 1;
   --bs-text-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
@@ -11581,7 +11578,7 @@ html {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
   background-color: #eee;
-  padding: 8px !important;
+  padding: 7px !important;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -11614,7 +11611,7 @@ html {
 
 .main-input {
   border: 0;
-  padding: 6px;
+  padding: 4px;
 }
 
 .problem-input-right {
