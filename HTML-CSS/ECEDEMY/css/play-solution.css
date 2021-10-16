@@ -7645,7 +7645,7 @@ textarea.form-control-lg {
 }
 
 .pt-6 {
-  padding-top: 2rem !important;
+  padding-top: 2.5rem !important;
 }
 
 .pe-0 {
@@ -11524,7 +11524,6 @@ html {
 
 .level {
   display: inline;
-  float: end;
   color: #fff;
   font-size: 1.5rem;
   padding-top: 0.1rem !important;
@@ -11533,8 +11532,6 @@ html {
 
 .level span {
   display: inline;
-  float: end;
-  color: #fff;
   padding-top: 0.1rem !important;
   font-weight: bold;
 }
@@ -11565,7 +11562,7 @@ html {
 
 .problem-text {
   flex: 1 0 auto !important;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .problem-bottom {
