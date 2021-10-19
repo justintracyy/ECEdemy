@@ -540,33 +540,33 @@ textarea {
 .input--style-6::-webkit-input-placeholder,
 .textarea--style-6::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #999;
+  color: #6e707e;
 }
 
 .input--style-6:-moz-placeholder,
 .textarea--style-6:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #999;
+  color: #6e707e;
   opacity: 1;
 }
 
 .input--style-6::-moz-placeholder,
 .textarea--style-6::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #999;
+  color: #6e707e;
   opacity: 1;
 }
 
 .input--style-6:-ms-input-placeholder,
 .textarea--style-6:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #999;
+  color: #6e707e;
 }
 
 .input--style-6:-ms-input-placeholder,
 .textarea--style-6:-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #999;
+  color: #6e707e;
 }
 
 .input--style-6:focus,
