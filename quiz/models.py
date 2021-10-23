@@ -516,10 +516,23 @@ class Question(models.Model):
     Shared properties placed here.
     """
 
+    class Meta:
+        verbose_name = _("Question")
+        verbose_name_plural = _("Questions")
+        ordering = ['id']
+
+    SCALE = (
+        (0, _('Easy')),
+        (1, _('Medium')),
+        (2, _('Hard')),
+    )
+
+    difficulty = models.IntegerField(
+        choices=SCALE, default=0, verbose_name=_("Difficulty"))
+
     quiz = models.ManyToManyField(Quiz,
                                   verbose_name=_("Quiz"),
                                   blank=True)
-
     category = models.ForeignKey(Category,
                                  verbose_name=_("Category"),
                                  blank=True,
@@ -536,12 +549,12 @@ class Question(models.Model):
                                            "you want displayed"),
                                verbose_name=_('Question'))
 
-    explanation = models.TextField(max_length=2000,
+    explanation = models.ImageField(max_length=2000,
                                    blank=True,
-                                   help_text=_("Explanation to be shown "
-                                               "after the question has "
-                                               "been answered."),
-                                   verbose_name=_('Explanation'))
+                                    help_text=_("Explanation to be shown "
+                                                "after the question has "
+                                                "been answered."),
+                                    verbose_name=_('Explanation'))
 
     objects = InheritanceManager()
 
@@ -580,6 +593,7 @@ def create_user(data):
                             password=data['password'],
                             first_name=data['first_name'],
                             last_name=data['last_name']
+
                             )
     user.is_admin=False
     user.is_staff=False

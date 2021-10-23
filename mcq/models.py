@@ -4,7 +4,7 @@ from quiz.models import Question
 ANSWER_ORDER_OPTIONS = (
     ('content', 'Content'),
     ('none', 'None'),
-    # ('random', 'Random')
+     #('random', 'Random')
 )
 
 

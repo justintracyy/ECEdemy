@@ -63,12 +63,12 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class MCQuestionAdmin(admin.ModelAdmin):
-    list_display = ('content', 'category', )
-    list_filter = ('category',)
+    list_display = ('content', 'category', 'difficulty',)
+    list_filter = ('category', )
     fields = ('content', 'category',
-              'figure', 'quiz', 'explanation', 'answer_order')
+              'figure', 'quiz', 'explanation', 'answer_order', 'difficulty')
 
-    search_fields = ('content', 'explanation')
+    search_fields = ('content', 'explanation', )
     filter_horizontal = ('quiz',)
 
     inlines = [AnswerInline]

@@ -5,18 +5,14 @@ from .views import QuizListView, CategoriesListView,\
 from django.urls import path
 
 
-urlpatterns = [         url(regex=r'^$', view=index, name='index'),
-                        url(regex=r'^login/$', view=login_user, name='login'),
-                        url(regex=r'^logout/$', view=logout_user, name='logout'),
-                       url(regex=r'^quizzes/$',
-                           view=QuizListView.as_view(),
-                           name='quiz_index'),
+urlpatterns = [
+    url(regex=r'^$', view=index, name='index'),
+    url(regex=r'^login/$', view=login_user, name='login'),
+    url(regex=r'^logout/$', view=logout_user, name='logout'),
+    url(regex=r'^quizzes/$',view=QuizListView.as_view(),name='quiz_index'),
+    url(regex=r'^category/$', view=CategoriesListView.as_view(),name='quiz_category_list_all'),
 
-                       url(regex=r'^category/$',
-                           view=CategoriesListView.as_view(),
-                           name='quiz_category_list_all'),
-
-                       url(regex=r'^category/(?P<category_name>[\w|\W-]+)/$',
+    url(regex=r'^category/(?P<category_name>[\w|\W-]+)/$',
                            view=ViewQuizListByCategory.as_view(),
                            name='quiz_category_list_matching'),
 
