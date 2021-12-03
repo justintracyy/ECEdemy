@@ -1,0 +1,178 @@
+ <!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Add Question | ECEdemy</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/final_logo.ico" />
+        <!-- Bootstrap icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- font Regular Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <!-- Core theme CSS -->
+        <link href='{% static "css/suggest-question.css" %}' rel="stylesheet" />
+        <link href='{% static "css/home.css" %}' rel="stylesheet" />
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <img class="logo-img" src="assets/final-logo.svg" alt="logo">
+                    <a class="navbar logo" href="index.html">ECE<span>DEMY</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="report.html">Report</a></li>
+                            <li class="nav-item"><a class="nav-link" href="hall-of-fame.html">Hall of Fame</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hello, User</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="suggest-question.html">Suggest a Question</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Input Area -->
+            <header class="py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="card-2">
+                            <div class="card-heading">
+                                <h2 class="fw-bolder text-black">Add Question</h2>
+                                <p class="lead text-justify text-black mb-3">Got something in mind? Drop your question below by filling up the necessary details. <br>Note: only one question at a time!</p>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST">
+                                    <div class="form-row">
+                                        <div class="name">Email address</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="email" name="email" placeholder="School Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Subject</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="email" name="email" placeholder="School Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Topic</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="email" name="email" placeholder="School Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Subtopic</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="email" name="email" placeholder="School Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Level</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="email" name="email" placeholder="School Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Question</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <textarea class="textarea--style-6" name="message" placeholder="Question"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Answer</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="text" name="answer" placeholder="Answer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Solution</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <textarea class="textarea--style-6" name="message" placeholder="Insert here your Solution/Explanation to the Question"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Source(s)</div>
+                                        <div class="value">
+                                            <div class="input-group">
+                                                <input class="input--style-6" type="text" name="source" placeholder="Cite the book, website, etc.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="name">Attachment(s)</div>
+                                        <div class="value">
+                                            <div class="input-group js-input-file">
+                                                <input class="input-file" type="file" name="file_cv" id="file">
+                                                <label class="label--file" for="file">Choose file</label>
+                                                <span class="input-file__info">No file chosen</span>
+                                            </div>
+                                            <div class="label--desc">Upload any relevant file if there's any. Max file size 50 MB</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary btn-lg" type="submit">Send Question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        
+
+        <!-- Footer-->
+        <footer class="bg-dark py-2 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-md-5 text-xl-start text-center">
+                        <div class="small m-0 text-white">
+                            &copy; 2021 ECEdemy. All Rights Reserved.</div></div>
+                    <img class="col-md-4 logo-img-footer align-items-center" src="assets/final-logo.svg" alt="">
+                    <div class="col-md-5 text-xl-end text-center">
+                        <a class="link-light small" href="index.html">Home</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">About Us</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

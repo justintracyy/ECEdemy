@@ -1,0 +1,50 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+
+def register(request):
+    return render(request, 'register.html')
+
+
+def login(request):
+    return render(request, 'login.html')
+
+
+def forgot_password(request):
+    return render(request, 'forgot-password.html')
+
+
+def index(request):
+    return render(request, 'index.html')
+
+
+def index_teacher(request):
+    return render(request, 'index-teacher.html')
+
+
+def suggest_question(request):
+    return render(request, 'suggest-question.html')
+
+
+def hall_of_fame(request):
+    return render(request, 'hall-of-fame.html')
+
+
+def play(request):
+    return render(request, 'play.html')
+
+
+def play_solution(request):
+    return render(request, 'play-solution.html')
+
+
+def profile(request):
+    return render(request, 'profile.html')
+
+
+def report(request):
+    return render(request, 'report.html')
+
+
+
