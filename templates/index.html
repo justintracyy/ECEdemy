@@ -20,6 +20,9 @@
     </head>
 
     <body class="d-flex flex-column h-100">
+
+
+
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -38,7 +41,7 @@
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
                                     {% if request.user.is_authenticated %}
                                     <li><a class="dropdown-item" href="index-teacher.html">Suggest a Question</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'login' %}">Sign out</a></li>
+                                    <li><a class="dropdown-item" href="">Sign out</a></li>
                                     {% else %}
                                      <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Sign up!</a></li>
                                     {% endif %}
@@ -79,43 +82,20 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row gx-5">
+
+                      {% for item_subjects  in subjects %}
                         <div class="col-lg-3 col-md-3 mb-2 px-3">
                             <div class="card h-100 border-0 rounded-4 pb-3">
                                 <img class="card-img-top px-6 pt-2" src="assets/math.svg" alt="MATH" />
                                 <div class="card-body p-1">
-                                    <a class="text-decoration-none link-dark stretched-link" href="play.html" title="Solve and answer problems in MATH"><h5 class="card-title fw-bolder fs-2 text-center mb-2">MATH</h5></a>
+                                    <a class="text-decoration-none link-dark stretched-link" href="play.html" title="Solve and answer problems in MATH"><h5 class="card-title fw-bolder fs-2 text-center mb-2">{{ item_subjects.ece_subject }}</h5></a>
                                     <p class="card-text text-center mb-0">Engineering Mathematics</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 mb-2 px-3">
-                            <div class="card h-100 border-0 rounded-4 pb-3">
-                                <img class="card-img-top px-6 pt-2" src="assets/elex.svg" alt="ELEX" />
-                                <div class="card-body p-1">
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!" title="Solve and answer problems in ELEX"><h5 class="card-title fw-bolder fs-2 text-center mb-2">ELEX</h5></a>
-                                    <p class="card-text text-center mb-0">Electronics Engineering</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 mb-2 px-3">
-                            <div class="card h-100 border-0 rounded-4 pb-3">
-                                <img class="card-img-top px-6 pt-2" src="assets/geas.svg" alt="GEAS" />
-                                <div class="card-body p-1">
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!" title="Solve and answer problems in GEAS"><h5 class="card-title fw-bolder fs-2 text-center mb-2">GEAS</h5></a>
-                                    <p class="card-text text-center mb-0">General Engineering and <br> Applied Science</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 mb-2 px-3">
-                            <div class="card h-100 border-0 rounded-4 pb-3">
-                                <img class="card-img-top px-6 pt-2" src="assets/esat.svg" alt="ESAT" />
-                                <div class="card-body p-1">
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!" title="Solve and answer problems in ESAT"><h5 class="card-title fw-bolder fs-2 text-center mb-2">ESAT</h5></a>
-                                    <p class="card-text text-center mb-0">Electronic Systems and Technologies</p>
-                                </div>
-                            </div>
-                        </div>
+                    {% endfor %}
                     </div>
                 </div>
                 <img src="assets/sub-decor1.svg" class="decor1 d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block" alt="">
