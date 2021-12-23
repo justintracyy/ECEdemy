@@ -93,28 +93,6 @@ class QuizECESubject(models.Model):
         help_text=_('Number of question to be answered')
     )
 
-    stored_score = models.BooleanField(
-        blank=False, default=False,
-        help_text=_('If yes, the result of eact attempt by the user will be stored'),
-        verbose_name=_('Score')
-    )
-
-    pass_mark = models.SmallIntegerField(
-        blank=True, default=0,
-        verbose_name=_('Pass Mark'),
-        help_text=_('Percentage required to pass exam.'),
-        validators=[MaxValueValidator(70)]
-    )
-
-    success_mark = models.TextField(
-        blank=True, help_text=_('Displayed if user passes'),
-        verbose_name=_('Success Text')
-    )
-
-    fail_mark = models.TextField(
-        blank=True, help_text=_('Displayed if use fails.'),
-        verbose_name=_('Fail Text')
-    )
 
     def save(self, force_insert=False, force_update=False, *args, **kwargs):
         self.url = re.sub('\s+', '-', self.url).lower()
