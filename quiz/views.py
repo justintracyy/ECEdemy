@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
+from quiz.models import ECESubject
 
 
 def loginPage(request):
@@ -12,7 +13,13 @@ def forgot_password(request):
 
 
 def index(request):
-    return render(request, 'index.html')
+    subjects = ECESubject.objects.all()
+    context = dict(
+      title="ECEDEMY",
+      subjects=subjects
+    )
+
+    return render(request, 'index.html', context)
 
 
 def index_teacher(request):
